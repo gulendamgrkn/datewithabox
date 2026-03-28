@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date with a Box — Curated Date Experiences</title>
+  <meta name="description" content="Date with a Box — Discover your perfect date experience. Choose from curated date boxes and help us create experiences you'll love." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Floating particles background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <div class="logo-icon">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="20" width="64" height="50" rx="8" stroke="currentColor" stroke-width="3" fill="none"/>
+          <path d="M8 32H72" stroke="currentColor" stroke-width="3"/>
+          <rect x="20" y="10" width="4" height="16" rx="2" fill="currentColor"/>
+          <rect x="56" y="10" width="4" height="16" rx="2" fill="currentColor"/>
+          <path d="M30 48C30 48 35 40 40 40C45 40 45 48 50 48" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="34" cy="44" r="2" fill="currentColor"/>
+          <circle cx="46" cy="44" r="2" fill="currentColor"/>
+        </svg>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Date with</span>
+        <span class="title-accent">a Box</span>
+      </h1>
+      <p class="hero-subtitle">Curated date experiences, delivered to your door. Pick a box, unwrap the magic.</p>
+      <a href="#boxes" class="hero-cta" id="explore-btn">
+        <span>Explore Our Boxes</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7M17 7H7M17 7V17"/>
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <span>Scroll to discover</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- Date Boxes Section -->
+  <section class="boxes-section" id="boxes">
+    <div class="section-header">
+      <span class="section-tag">Our Collections</span>
+      <h2 class="section-title">Choose Your Date Box</h2>
+      <p class="section-desc">Each box is thoughtfully curated to create unforgettable moments. Pick the one that speaks to you.</p>
+    </div>
+
+    <div class="boxes-grid">
+      <!-- Self Date -->
+      <div class="date-box" id="box-self-date" data-box="self">
+        <div class="box-glow"></div>
+        <div class="box-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="20" r="10" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M16 52C16 42 23 36 32 36C41 36 48 42 48 52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M32 44V52M28 48H36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="box-title">Self Date</h3>
+        <p class="box-desc">A box dedicated to you. Pamper yourself, reflect, and enjoy your own wonderful company.</p>
+        <div class="box-tag">Self-care essentials</div>
+      </div>
+
+      <!-- Book Date -->
+      <div class="date-box book-date-box" id="box-book-date" data-box="book">
+        <div class="box-glow"></div>
+        <div class="box-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 14C12 12 14 10 18 10C22 10 32 12 32 16V54C32 50 22 48 18 48C14 48 12 50 12 50V14Z" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M52 14C52 12 50 10 46 10C42 10 32 12 32 16V54C32 50 42 48 46 48C50 48 52 50 52 50V14Z" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M20 22H28M20 28H26M36 22H44M36 28H42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="box-title">Book Date</h3>
+        <p class="box-desc">Curl up with a great read. Pick your favorite genre and we'll curate the perfect literary evening.</p>
+        <div class="box-tag">Choose your genre ↓</div>
+        <div class="genre-selector" id="genre-selector">
+          <p class="genre-label">Pick your genres:</p>
+          <div class="genre-options">
+            <button class="genre-btn" data-genre="romance">Romance</button>
+            <button class="genre-btn" data-genre="mystery">Mystery</button>
+            <button class="genre-btn" data-genre="scifi">Sci-Fi</button>
+            <button class="genre-btn" data-genre="fantasy">Fantasy</button>
+            <button class="genre-btn" data-genre="thriller">Thriller</button>
+            <button class="genre-btn" data-genre="classics">Classics</button>
+            <button class="genre-btn" data-genre="poetry">Poetry</button>
+            <button class="genre-btn" data-genre="selfhelp">Self-Help</button>
+            <button class="genre-btn" data-genre="biography">Biography</button>
+            <button class="genre-btn" data-genre="horror">Horror</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lego Date -->
+      <div class="date-box" id="box-lego-date" data-box="lego">
+        <div class="box-glow"></div>
+        <div class="box-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="28" width="36" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="40" cy="24" r="4" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="24" cy="38" r="3" fill="currentColor" opacity="0.3"/>
+            <circle cx="36" cy="38" r="3" fill="currentColor" opacity="0.3"/>
+            <rect x="18" y="52" width="28" height="6" rx="2" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 class="box-title">Lego Date</h3>
+        <p class="box-desc">Build something amazing together. Creativity, fun, and a touch of friendly competition.</p>
+        <div class="box-tag">Creative & playful</div>
+      </div>
+
+      <!-- Spa Date -->
+      <div class="date-box" id="box-spa-date" data-box="spa">
+        <div class="box-glow"></div>
+        <div class="box-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 8C32 8 28 16 28 24C28 28 30 30 32 30C34 30 36 28 36 24C36 16 32 8 32 8Z" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M22 18C22 18 20 26 22 32C23 35 26 36 28 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M42 18C42 18 44 26 42 32C41 35 38 36 36 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <ellipse cx="32" cy="46" rx="18" ry="10" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M22 42C22 42 26 38 32 38C38 38 42 42 42 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="box-title">Spa Date</h3>
+        <p class="box-desc">Relax, unwind, and melt away stress. Everything you need for a luxurious at-home spa experience.</p>
+        <div class="box-tag">Pure relaxation</div>
+      </div>
+
+      <!-- Cooking Date -->
+      <div class="date-box" id="box-cooking-date" data-box="cooking">
+        <div class="box-glow"></div>
+        <div class="box-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 36H48C48 48 42 54 32 54C22 54 16 48 16 36Z" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M12 36H52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M24 28V20M32 28V16M40 28V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <path d="M20 36C20 36 24 32 28 32C32 32 32 36 36 36C40 36 44 32 44 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+          </svg>
+        </div>
+        <h3 class="box-title">Cooking Date</h3>
+        <p class="box-desc">Whip up delicious memories in the kitchen. Recipes, ingredients list, and all the fun tools included.</p>
+        <div class="box-tag">Delicious moments</div>
+      </div>
+
+      <!-- Cottage Core Date -->
+      <div class="date-box" id="box-cottage-date" data-box="cottage">
+        <div class="box-glow"></div>
+        <div class="box-icon">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- cottage roof -->
+            <path d="M8 32L32 12L56 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- cottage body -->
+            <rect x="14" y="32" width="36" height="22" rx="2" stroke="currentColor" stroke-width="2.5"/>
+            <!-- door -->
+            <rect x="26" y="40" width="12" height="14" rx="6" stroke="currentColor" stroke-width="2"/>
+            <!-- window -->
+            <circle cx="22" cy="40" r="3.5" stroke="currentColor" stroke-width="2"/>
+            <path d="M22 36.5V43.5M18.5 40H25.5" stroke="currentColor" stroke-width="1.5"/>
+            <!-- flower left -->
+            <circle cx="12" cy="52" r="2" fill="currentColor" opacity="0.35"/>
+            <circle cx="10" cy="49" r="1.5" fill="currentColor" opacity="0.25"/>
+            <path d="M12 54V58" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+            <!-- flower right -->
+            <circle cx="52" cy="50" r="2" fill="currentColor" opacity="0.35"/>
+            <circle cx="54" cy="47" r="1.5" fill="currentColor" opacity="0.25"/>
+            <path d="M52 52V58" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+            <!-- chimney -->
+            <rect x="40" y="16" width="6" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+            <path d="M41 14C41 14 43 10 43 10C43 10 45 14 45 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3 class="box-title">Cottage Core</h3>
+        <p class="box-desc">Wildflowers, warm tea, and rustic charm. Embrace the simple, cozy beauty of countryside living.</p>
+        <div class="box-tag">Whimsical & warm</div>
+        <div class="cottage-extras">
+          <span class="cottage-item">🌿 Dried flowers</span>
+          <span class="cottage-item">🍯 Artisan honey</span>
+          <span class="cottage-item">🕯️ Beeswax candle</span>
+          <span class="cottage-item">📜 Handwritten poem</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sneak Peek Section -->
+  <section class="peek-section" id="peek">
+    <div class="section-header">
+      <span class="section-tag">Sneak Peek</span>
+      <h2 class="section-title">What's Inside the Box?</h2>
+      <p class="section-desc">A little preview of the magic waiting for you. Each box is packed with handpicked goodies to make your date unforgettable.</p>
+    </div>
+
+    <div class="peek-grid">
+      <div class="peek-card" id="peek-self">
+        <div class="peek-image-wrap">
+          <img src="images/self-date.png" alt="Self Date box contents — candle, eye mask, journal, bath salts, and more" loading="lazy" />
+        </div>
+        <div class="peek-label">Self Date</div>
+      </div>
+
+      <div class="peek-card" id="peek-book">
+        <div class="peek-image-wrap">
+          <img src="images/book-date.png" alt="Book Date box contents — novel, bookmark, tea, chocolates, and reading light" loading="lazy" />
+        </div>
+        <div class="peek-label">Book Date</div>
+      </div>
+
+      <div class="peek-card" id="peek-lego">
+        <div class="peek-image-wrap">
+          <img src="images/lego-date.png" alt="Lego Date box contents — building set, bricks, challenge card, snacks, and trophy" loading="lazy" />
+        </div>
+        <div class="peek-label">Lego Date</div>
+      </div>
+
+      <div class="peek-card" id="peek-spa">
+        <div class="peek-image-wrap">
+          <img src="images/spa-date.png" alt="Spa Date box contents — face masks, jade roller, essential oils, bath bombs" loading="lazy" />
+        </div>
+        <div class="peek-label">Spa Date</div>
+      </div>
+
+      <div class="peek-card" id="peek-cooking">
+        <div class="peek-image-wrap">
+          <img src="images/cooking-date.png" alt="Cooking Date box contents — recipe card, spices, wooden spoon, apron, pasta" loading="lazy" />
+        </div>
+        <div class="peek-label">Cooking Date</div>
+      </div>
+
+      <div class="peek-card" id="peek-cottage">
+        <div class="peek-image-wrap">
+          <img src="images/cottage-core.png" alt="Cottage Core box contents — dried flowers, honey, beeswax candle, poem, pressed flowers" loading="lazy" />
+        </div>
+        <div class="peek-label">Cottage Core</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Poll Section -->
+  <section class="poll-section" id="poll">
+    <div class="section-header">
+      <span class="section-tag">Help Us Help You</span>
+      <h2 class="section-title">What Do You Love?</h2>
+      <p class="section-desc">Answer these quick questions so we can create the perfect date experiences for you.</p>
+    </div>
+
+    <div class="poll-container" id="poll-container">
+      <div class="poll-progress">
+        <div class="poll-progress-bar" id="poll-progress-bar"></div>
+      </div>
+      <div class="poll-counter">
+        <span id="poll-current">1</span> / <span id="poll-total">20</span>
+      </div>
+
+      <div class="poll-questions" id="poll-questions">
+        <!-- Questions will be injected by JS -->
+      </div>
+
+      <div class="poll-nav">
+        <button class="poll-nav-btn" id="poll-prev" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg>
+          <span>Previous</span>
+        </button>
+        <button class="poll-nav-btn poll-nav-next" id="poll-next">
+          <span>Next</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12H19M19 12L12 5M19 12L12 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Poll complete message with recommendation -->
+    <div class="poll-complete" id="poll-complete" style="display:none;">
+      <div class="complete-icon">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="30" stroke="currentColor" stroke-width="3"/>
+          <path d="M26 40L36 50L54 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3>Your Perfect Match!</h3>
+      <p class="result-subtitle">Based on your answers, we think you'd absolutely love...</p>
+
+      <div class="result-card" id="result-card">
+        <div class="result-card-icon" id="result-icon"></div>
+        <h4 class="result-card-title" id="result-title"></h4>
+        <p class="result-card-desc" id="result-desc"></p>
+        <div class="result-card-tag" id="result-tag"></div>
+      </div>
+
+      <div class="result-runner-up" id="result-runner-up"></div>
+
+      <button class="result-retake" id="poll-retake">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 105.64-11.36L1 10"/></svg>
+        <span>Retake Quiz</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Help Center Section -->
+  <section class="help-section" id="help">
+    <div class="section-header">
+      <span class="section-tag">Help Center</span>
+      <h2 class="section-title">Common Questions</h2>
+      <p class="section-desc">Everything you need to know about Date with a Box. Can't find your answer? Drop us an email!</p>
+    </div>
+
+    <div class="faq-container" id="faq-container">
+      <div class="faq-item" id="faq-1">
+        <button class="faq-question" aria-expanded="false">
+          <span>What is Date with a Box?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9L12 15L18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Date with a Box is a curated experience subscription service. Each box contains everything you need for a themed date — whether it's a cozy self-care evening, a literary escape, a creative Lego build, a relaxing spa night, a cooking adventure, or a whimsical cottage core experience.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-2">
+        <button class="faq-question" aria-expanded="false">
+          <span>How do I choose a box?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9L12 15L18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Simply browse our collections above and pick the date theme that excites you most! For Book Date, you can even select your preferred genres. We'll handle the rest — curating the perfect items for your chosen experience.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-3">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I gift a box to someone?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9L12 15L18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely! Our boxes make the perfect gift. During checkout, you can add a gift message and enter a different shipping address. We'll even wrap it with extra love and a personalized note.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-4">
+        <button class="faq-question" aria-expanded="false">
+          <span>What if I'm not happy with my box?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9L12 15L18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Your happiness is our priority! If something isn't right, reach out to us within 7 days of delivery. We'll work with you to make it right — whether that's a replacement, exchange, or a full refund.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-5">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you offer subscriptions?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9L12 15L18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Yes! You can subscribe to receive a new themed box every month, bi-monthly, or quarterly. Subscribers get exclusive discounts, early access to new themes, and surprise bonus items in every box.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-6">
+        <button class="faq-question" aria-expanded="false">
+          <span>Are the products eco-friendly?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9L12 15L18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>We care about the planet! We use recyclable and biodegradable packaging wherever possible. Many of our products are sourced from small, sustainable brands. We're always working to reduce our environmental footprint.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shipping Process Section -->
+  <section class="shipping-section" id="shipping">
+    <div class="section-header">
+      <span class="section-tag">How It Works</span>
+      <h2 class="section-title">Shipping Process</h2>
+      <p class="section-desc">From your order to your doorstep — here's the journey your box takes.</p>
+    </div>
+
+    <div class="shipping-timeline">
+      <div class="timeline-step" id="step-order">
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="step-content">
+          <h4>Order Placed</h4>
+          <p>Choose your favorite box and complete your order. You'll receive an instant confirmation email.</p>
+        </div>
+        <div class="step-number">1</div>
+      </div>
+
+      <div class="timeline-connector"></div>
+
+      <div class="timeline-step" id="step-curate">
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="14" width="28" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+            <path d="M10 22H38" stroke="currentColor" stroke-width="2"/>
+            <path d="M24 14V10M18 14V12M30 14V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="30" r="2" fill="currentColor" opacity="0.4"/>
+            <circle cx="28" cy="30" r="2" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        <div class="step-content">
+          <h4>Curated with Love</h4>
+          <p>Our team handpicks and carefully packs every item in your box within 1-2 business days.</p>
+        </div>
+        <div class="step-number">2</div>
+      </div>
+
+      <div class="timeline-connector"></div>
+
+      <div class="timeline-step" id="step-ship">
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 30H30V16H6V30Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M30 22H38L42 28V30H30" stroke="currentColor" stroke-width="2"/>
+            <circle cx="14" cy="34" r="3" stroke="currentColor" stroke-width="2"/>
+            <circle cx="36" cy="34" r="3" stroke="currentColor" stroke-width="2"/>
+            <path d="M17 30H33" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="step-content">
+          <h4>On Its Way</h4>
+          <p>Your box ships with tracking! Standard delivery takes 3-5 business days. Express options available.</p>
+        </div>
+        <div class="step-number">3</div>
+      </div>
+
+      <div class="timeline-connector"></div>
+
+      <div class="timeline-step" id="step-deliver">
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 6L24 6C24 6 18 14 18 22C18 28 24 32 24 32C24 32 30 28 30 22C30 14 24 6 24 6Z" stroke="currentColor" stroke-width="2"/>
+            <circle cx="24" cy="22" r="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 36C12 36 16 32 24 32C32 32 36 36 36 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 42H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="step-content">
+          <h4>Delivered to You</h4>
+          <p>Unwrap the magic! Your perfectly curated date experience arrives at your door, ready to enjoy.</p>
+        </div>
+        <div class="step-number">4</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Section -->
+  <section class="payment-section" id="payment">
+    <div class="section-header">
+      <span class="section-tag">Secure Checkout</span>
+      <h2 class="section-title">Payment Options</h2>
+      <p class="section-desc">We accept all major payment methods. Your transactions are secured with industry-standard encryption.</p>
+    </div>
+
+    <div class="payment-cards">
+      <!-- Visa -->
+      <div class="payment-card" id="pay-visa">
+        <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="78" height="48" rx="6" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+          <text x="40" y="30" text-anchor="middle" font-family="Outfit, sans-serif" font-size="16" font-weight="700" fill="#1A1F71">VISA</text>
+        </svg>
+        <span>Visa</span>
+      </div>
+
+      <!-- Mastercard -->
+      <div class="payment-card" id="pay-mastercard">
+        <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="78" height="48" rx="6" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+          <circle cx="32" cy="25" r="12" fill="#EB001B" opacity="0.85"/>
+          <circle cx="48" cy="25" r="12" fill="#F79E1B" opacity="0.85"/>
+        </svg>
+        <span>Mastercard</span>
+      </div>
+
+      <!-- Amex -->
+      <div class="payment-card" id="pay-amex">
+        <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="78" height="48" rx="6" fill="#006FCF" stroke="#005BAC" stroke-width="1"/>
+          <text x="40" y="30" text-anchor="middle" font-family="Outfit, sans-serif" font-size="10" font-weight="700" fill="white">AMEX</text>
+        </svg>
+        <span>American Express</span>
+      </div>
+
+      <!-- Apple Pay -->
+      <div class="payment-card" id="pay-applepay">
+        <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="78" height="48" rx="6" fill="#000" stroke="#333" stroke-width="1"/>
+          <text x="40" y="30" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="600" fill="white"> Pay</text>
+        </svg>
+        <span>Apple Pay</span>
+      </div>
+
+      <!-- Google Pay -->
+      <div class="payment-card" id="pay-googlepay">
+        <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="78" height="48" rx="6" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+          <text x="40" y="30" text-anchor="middle" font-family="Outfit, sans-serif" font-size="10" font-weight="600" fill="#5F6368">G Pay</text>
+        </svg>
+        <span>Google Pay</span>
+      </div>
+
+      <!-- PayPal -->
+      <div class="payment-card" id="pay-paypal">
+        <svg viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="78" height="48" rx="6" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+          <text x="40" y="30" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="700" fill="#003087">Pay<tspan fill="#009CDE">Pal</tspan></text>
+        </svg>
+        <span>PayPal</span>
+      </div>
+    </div>
+
+    <div class="payment-secure">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <rect x="3" y="11" width="18" height="11" rx="2"/>
+        <path d="M7 11V7a5 5 0 0110 0v4"/>
+      </svg>
+      <span>All transactions are secured with 256-bit SSL encryption</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">Date with a Box</span>
+        <p class="footer-tagline">Making every date unforgettable, one box at a time.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#boxes">Our Boxes</a>
+        <a href="#peek">Sneak Peek</a>
+        <a href="#poll">Survey</a>
+        <a href="#help">Help Center</a>
+        <a href="#shipping">Shipping</a>
+        <a href="#payment">Payment</a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-info">
+        <p>Created by <strong>Gulendam Gurkan</strong></p>
+        <a href="mailto:gulendam5@icloud.com" class="footer-email" id="footer-email">gulendam5@icloud.com</a>
+      </div>
+
+      <div class="footer-location" id="footer-location">
+        <div class="location-pin">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Toronto, Ontario, Canada</span>
+        </div>
+        <div class="worldwide-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20"/>
+            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+          <span>We ship worldwide 🌍</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Date with a Box. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
